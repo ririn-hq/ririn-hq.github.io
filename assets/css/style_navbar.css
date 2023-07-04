@@ -1,0 +1,127 @@
+/* Color */
+:root {
+  --blue:  rgb(0, 242, 255);
+  --black: rgb(0,0,0);
+  --white: rgb(242, 242, 242);
+  --red: rgb(255, 0, 0);
+}
+
+/******************header-navbar***************/
+.container {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar styles */
+.navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1229px;
+  width: 170vh;
+}
+.navbar-header-logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--black);
+}
+  .menu-toggle {
+    display: none;
+  }
+  .menu-navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  .list {
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    padding: 0px;
+  }
+  .list li {
+    margin-left: 10px;
+  }
+  .list li a {
+    text-decoration: none;
+    color: var(--black);;
+  }
+
+  .list li a:hover, .navbar-header-logo a:hover {
+    color:rgb(0, 225, 255);
+    font-weight: bold;
+  }
+
+  /* Responsive styles */
+@media (max-width: 475px) {
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--black);;
+    cursor: pointer;
+  }
+
+  .menu-navbar-right {
+    display: none;
+  }
+
+  .menu-navbar-right.open {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 10px;
+    z-index: 1;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-navbar-right.open li {
+    margin: 7px; 
+  }
+
+  .menu-navbar-right.open li:first-child {
+    margin-top: 10px;
+  }
+
+  .menu-navbar-right.open li a {
+    font-size: 16px;
+    color: var(--black);;
+    margin: 20px;
+  }
+  
+  .menu-navbar-right.open li:last-child {
+    margin-bottom: 0;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  /* Dark mode styles for responsive */
+  body.dark-mode .menu-navbar-right.open {
+    background-color: var(--black);;
+  }
+
+  body.dark-mode .menu-navbar-right.open li a {
+    color: var(--white);
+  }
+
+  .navbar.dark-mode .menu-toggle,
+  .navbar.dark-mode .menu-navbar-right {
+    color: var(--white);
+  }
+}
+  
+
+  

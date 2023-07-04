@@ -1,0 +1,67 @@
+/* Color */
+:root {
+  --blue:  rgb(0, 242, 255);
+  --black: rgb(0,0,0);
+  --white: rgb(242, 242, 242);
+  --red: rgb(255, 0, 0);
+}
+
+/* Dark mode styles */
+/*         navbar    /        */
+body.dark-mode {
+background-color: var(--black);
+color: var(--white);
+} 
+.navbar.dark-mode {
+background-color: var(--black);
+}
+.navbar.dark-mode .navbar-header-logo a,
+.navbar.dark-mode .list li a {
+color: var(--white);
+}
+.menu-navbar-right.open {
+background-color: var(--white);
+}
+.menu-navbar-right.open li a {
+color: var(--black);;
+}
+/* Dark mode styles for text */
+body.dark-mode .navbar-header-logo a, 
+body.dark-mode .list li a, 
+body.dark-mode .menu-toggle, 
+body.dark-mode .menu-navbar-right.open li a {
+  color: var(--white);
+}
+
+/* *************Style_profile.css************** */
+  /* Dark mode styles for .name */
+.dark-mode .name {
+    color: var(--white);
+}
+/* Dark mode styles for .description */
+.dark-mode .description {
+  color: var(--white);
+}
+  
+/* *************style_footer.css***************/ 
+.dark-mode .real {
+  color: var(--white);
+}
+
+/**************button_edit.css***************/ 
+/* Dark mode styles for section #services li a */
+.dark-mode section #services li a {
+  color: var(--white);
+}
+
+.dark-mode .list li a:hover {
+  color:var(--red);
+  font-weight: bold;
+}
+.dark-mode .navbar-header-logo a:hover {
+  color:var(--red);
+}
+
+/* .dark-mode .myavt {
+  box-shadow: 0 7px 7px var(--red);
+} */
