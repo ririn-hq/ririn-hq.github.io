@@ -1,0 +1,11 @@
+/* Projects:_______________________________________________ */
+@media (max-width: 475px) {
+    .dark-mode .repository  {
+      border-top: 1.5px solid var(--white);
+      border-bottom: 1.5px solid var(--white);
+    }
+  }
+
+
+/* Navbar:_______________________________________________ */
+    

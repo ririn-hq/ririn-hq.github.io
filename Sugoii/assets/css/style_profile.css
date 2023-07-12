@@ -1,0 +1,63 @@
+/* Color */
+:root {
+    --blue:  rgb(0, 242, 255);
+    --black: rgb(0,0,0);
+    --white: rgb(242, 242, 242);
+    --red: rgb(255, 0, 0);
+}
+
+/******************Main***************/
+.main{
+    width: 100vw;
+    height: 88vh;
+
+    color: var(--black);
+    display: flex;
+    flex-basis:0%;
+    flex-direction:column;
+
+    align-items: center;
+    justify-content: center;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 2rem;
+    width: 76%;
+}
+.avt {
+    display: flex;
+    justify-content: center;
+    height: 168px;
+    width: 100%;
+}
+.myavt {
+    display: block;
+    border: 7px double var(--blue);
+    border-radius: 50%;
+    height: 168px;
+    width: 168px;
+    box-shadow: 0 9px 9px rgba(180, 35, 129, 0.4);
+    /* transition: transform 0.3s ease; */
+    cursor:not-allowed ;
+}
+  
+.myavt:hover {
+transform: scale(1.1);
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+.description {
+    display: flex;
+    text-align: center;
+    color:var(--black);
+}

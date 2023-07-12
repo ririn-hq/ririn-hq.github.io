@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style_update.css">
+</head>
+<body>
+  <h2>Add Event to Timeline</h2>
+  <form id="event-form">
+    <label for="event-date">Date:</label>
+    <input type="date" id="event-date" required>
+    <br>
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name" required>
+    <br>
+    <label for="event-description">Event Description:</label>
+    <textarea id="event-description" required></textarea>
+    <br>
+    <button type="submit" onclick="submitEvent()">Submit</button>
+  </form>
+
+  <script src="script_update.js"></script>
+</body>
+</html>
