@@ -1,0 +1,111 @@
+/* Color */
+:root {
+  --blue:  rgb(0, 242, 255);
+  --black: rgb(27, 30, 33);
+  --white: rgb(218, 213, 213);
+  --red: rgb(255, 0, 0);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: var(--black);
+  color: var(--white);
+} 
+.navbar.dark-mode {
+  background-color: var(--black);
+}
+.navbar.dark-mode .navbar-header-logo a,
+.navbar.dark-mode .list li a {
+color: var(--white);
+}
+.menu-navbar-right.open {
+background-color: var(--white);
+}
+.menu-navbar-right.open li a {
+color: var(--black);
+}
+/* Dark mode styles for text */
+body.dark-mode .navbar-header-logo a, 
+body.dark-mode .list li a, 
+body.dark-mode .menu-toggle, 
+body.dark-mode .menu-navbar-right.open li a {
+  color: var(--white);
+}
+.dark-mode .navbar-header-logo a:hover{
+  color: var(--blue) !important;
+}
+
+/*Profile:_______________________________________________ */
+.dark-mode .name {
+  color: var(--white);
+}
+.dark-mode .description {
+  color: var(--white);
+}
+.dark-mode .myavt {
+  /* transition: transform 0.5s ease; */
+  transition: transform 0.5s ease-in-out;  
+  border: 7px double var(--blue);
+}
+.dark-mode .myavt:hover {
+  transform: translateY(-30px) scale(1.2); 
+}
+.dark-mode .name {
+  transition: 0.3s all ease;
+}
+.dark-mode .name:hover {
+  text-shadow: var(--red) -2px 0, var(--blue) 2px 0;
+}
+
+/*Footer:_______________________________________________ */
+.dark-mode .real {
+  color: var(--white);
+}
+.dark-mode .navbar-header-logo a:hover {
+  color:var(--red);
+}
+
+/*Button:_______________________________________________ */
+.dark-mode section #services li a {
+  color: var(--white);
+}
+
+.dark-mode .list li a:hover {
+  color: var(--blue);
+  font-weight: bold;
+}
+.dark-mode section #services li div:hover {
+  /* Zoom in effect */
+  transform: scale(1.4);
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+
+/* Projects:_______________________________________________ */
+.dark-mode .repository {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+
+}
+.dark-mode .repository p {
+  color: var(--white)
+}
+.dark-mode .repository a {
+  color: var(--blue);
+}
+
+/* Actions:_______________________________________________ */
+.dark-mode a {
+  color: var(--white);
+}
+.dark-mode a:hover {
+  color:var(--blue);
+  /* text-decoration: underline; */
+}
+
+.dark-mode .actions-item:hover {
+  border-bottom: 1px solid var(--blue);
+}
+
+/*_________________________________________________________________________________________________ Actions_____*/
