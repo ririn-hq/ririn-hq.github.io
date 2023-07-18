@@ -1,0 +1,111 @@
+/* Color */
+:root {
+    --blue:  rgb(0, 242, 255);
+    --black: rgb(27, 30, 33);
+    --white: rgb(218, 213, 213);
+    --red: rgb(186, 42, 42);
+  }
+
+
+
+/*_________________________________________________ [ Style ] ____________________*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto !important;
+}
+
+h4, p {
+    text-align: center;
+}
+.text-hello{
+    margin-top: 0px;
+    font-size: 30px;
+}
+h4 {
+    margin-bottom: 0px;
+}
+p {
+    margin-top: 0px;
+}
+a { 
+    text-decoration: none;
+}
+a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.dark-mode a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.more-infomations {
+  display: block;
+  width: 70vw;
+}
+  
+.hello,
+.name-more,
+.gamelist,
+.anime,
+.fact-content,
+.like-sendu,
+span {
+  width: 100%;
+}
+
+.id-game, .id-name {
+  padding-left: 38%;
+}
+
+/*_________________________________________________ [ Responsive ] ____________________*/
+@media (max-width: 950px) {
+  .id-game, .id-name {
+    padding-left: 30%;
+  }
+}
+
+@media (max-width: 730px) {
+  .id-game, .id-name {
+    padding-left: 25%;
+  }
+}
+
+@media (max-width: 475px) {
+  .more-infomations {
+    width: 90vw;
+  }
+
+  .id-game, .id-name {
+    padding-left: 15%;
+  }
+
+  .text-hello {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 321px) {
+  html {
+    font-size: 12px;
+  }
+  .text-hello {
+    font-size: 15px;
+  }
+  .more-infomations {
+    width: 95vw;
+  }
+}
+
+
+  /*_________________________________________________ [ Dark-mode ] ____________________*/
+  .dark-mode a {
+    text-decoration: underline;
+  }
