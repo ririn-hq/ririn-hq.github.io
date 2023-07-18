@@ -75,6 +75,10 @@ a:hover {
     }
   }
   @media (max-width: 475px) {
+    .more-infomations {
+      display: block;
+      width: 90vw;
+  }
     .id-game, .id-name {
       padding-left: 15%;
     }
