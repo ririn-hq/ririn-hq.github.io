@@ -1,0 +1,147 @@
+/* Color */
+:root {
+    --blue:  rgb(0, 242, 255);
+    --trueBlack: rgb(0, 0, 0);
+    --trueWhite: rgb(255, 255, 255);
+    --red: rgb(186, 42, 42);
+    --black: rgb(0,0,0);
+    --white: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto !important;
+  transition: background-color 1s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  position: fixed !important;
+  top: 0;
+
+  z-index: 100;
+}
+
+.navbar {
+  background-color:var(--trueWhite)
+}
+
+/*_________________________________________________ [ Style ] ____________________*/
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+h4, p {
+    text-align: center;
+}
+
+.text-hello {
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+a { 
+  text-decoration: none;
+}
+
+a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.dark-mode a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.more-infomations {
+  display: block;
+  width: 70vw;
+
+  z-index: 10;
+}
+  
+.hello,
+.name-more,
+.gamelist,
+.anime,
+.fact-content,
+.like-sendu, span {
+  width: 100%;
+}
+
+.id-game, .id-name {
+  padding-left: 38%;
+}
+
+/*_________________________________________________ [ Responsive ] ____________________*/
+@media (max-width: 950px) {
+  .id-game, .id-name {
+    padding-left: 30%;
+  }
+}
+
+@media (max-width: 730px) {
+  .id-game, .id-name {
+    padding-left: 25%;
+  }
+}
+
+@media (max-width: 475px) {
+  .more-infomations {
+    width: 90vw;
+  }
+
+  .id-game, .id-name {
+    padding-left: 15%;
+  }
+
+  .text-hello {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 321px) {
+  html {
+    font-size: 12px;
+  }
+  .text-hello {
+    font-size: 15px;
+  }
+  .more-infomations {
+    width: 95vw;
+  }
+}
+
+/*________________________________________________________________________________ [ Dark-mode ] ____________________*/
+.dark-mode a {
+  text-decoration: underline;
+}
+.dark-mode .hello,
+.dark-mode .name-more,
+.dark-mode .gamelist,
+.dark-mode .anime,
+.dark-mode  .fact-content,
+.dark-mode .like-sendu,
+.dark-mode span {
+  color: var(--white);
+} 
+.dark-mode .navbar {
+  background-color: var(--black);
+}
