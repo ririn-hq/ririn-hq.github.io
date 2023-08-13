@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="Tokisaki Nino">
+    <meta property="og:description" content="Hallo!">
+    <meta property="og:site_name" content="nino.is-a.dev">
+    <meta name="theme-color" content="#00fff2;">
+    <meta property="og:image" content="assets\image\march7th.jpg">
+
+    <title>Tokisaki Nino</title>
+    <link rel="icon" href="./assets/image/Avt_cicle.ico">
+    <!-- style chung -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+  
+    <!-- navbar -->
+    <link rel="stylesheet" href="./assets/css/style_navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-8S5/LAB9s6rxLvggnUpPA6vfUdF1fQ2wiSs6VgkSO4cQcQ72xQexzxt+V/IZUPZI" crossorigin="anonymous">
+    
+    <!-- Profile -->
+    <link href="./assets/css/style_main.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/style_main_stars.css" rel="stylesheet" type="text/css">
+    
+    <!-- Button MXH - Contact -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/style_button.css" rel="stylesheet" type="text/css">  
+    
+    <!-- Footer -->
+    <link href="./assets/css/style_footer.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/style_darkmode.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+          <nav class="navbar">
+            <div class="navbar-header-logo">
+              <a href="index.html">Nino</a>
+            </div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+            
+              <div class="menu-navbar-right">
+                <ul class="list">
+                  <li class="limenuRight"><a href="index.html">Home</a></li>
+                  <li class="limenuRight"><a href="index_actions.html">Actions</a></li>
+                  <li class="limenuRight"><a href="index_project.html">Projects</a></li>
+                  <li class="limenuRight"><a href="index_messages.html">Messages</a></li>
+                  <li class="limenuRight"><a href="index_about.html">About</a></li>
+                  <li class="limenuRight">
+                      <div class="toggle-btn _1st-toggle-btn" id="mode-link">
+                        <input type="checkbox">
+                        <span></span>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+        </nav> 
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="profile">
+        <div class="avt"> 
+          <img class="myavt" src="./assets/image/Avt.jpg">
+        </div> 
+        <div class="name">Tokisaki Nino</div>
+        <p class="description"> What kind of person do you expect me to be? Normal partner? Self-training subjects? A social acquaintance... or... an important teammate? Based on your attitude and expectations, I will "play" or "become" one of them." - Yelan - Genshin Impact.</p>
+      <section>
+        <ul id="services">
+          <li>
+            <div class="facebook">
+              <a href="https://www.facebook.com/nino.real.memory" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="twitter">
+              <a href="https://twitter.com/_tokisaki_nino" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="instagram">
+              <a href="https://www.instagram.com/nino.real.memories/" target="_blank" >
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="github">
+              <a href="https://github.com/TokisakiNinoVn" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      
+      </div>
+    </div>
+
+
+  <!--_______________________________________________________________ [ Star ] ____________________-->
+    <div class="stars">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+
+    <!-- _______________________________________________________________ [ Waves ] ____________________-->
+    <div class="div-wave">
+      <div class="waves">
+        <div class="waveWrapper waveAnimation">
+          <div class="waveWrapperInner bgTop">
+            <!-- <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div> -->
+            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+          </div>
+          <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+          </div>
+          <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+            <!-- <div class="wave waveBottom" style="background-image: url('./assets\image\wave-bot.png')"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--_______________________________________________________________ [ Bubble ] ____________________-->
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <!--_______________________________________________________________ [ Count view-er ] ____________________-->
+    <!-- <p class="coutn" >View: <span id="visitCount">0</span></p> -->
+
+    <!--_______________________________________________________________ [ Footer ] ____________________-->
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        <span class = "real">[💖Sugoii Family - By Tokisaki Nino💖] <p class="coutn" > [Views: <span id="visitCount">0</span>]</p></span>
+        
+      </div>
+    </footer>
+
+    <!--_______________________________________________________________ [ JavaScripts ] ____________________-->
+    <script src="./assets/js/js_index.js"></script>
+    <script>
+      function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
+
+  </body>
+</html>

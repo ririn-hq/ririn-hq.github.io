@@ -1,0 +1,176 @@
+/* Color */
+:root {
+  --blue:  rgb(0, 242, 255);
+  --black: rgb(27, 30, 33);
+  --white: rgb(218, 213, 213);
+  --trueWhite: rgb(255, 255, 255);
+  --red: rgb(186, 42, 42);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: auto !important; */
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    
+}
+
+.dark-mode .container {
+  background-color: var(--black);
+}
+.container {
+  background-color:var(--trueWhite);
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.list-res {
+  width: 80vw;
+  display: flex;
+}
+
+#repositories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.repository {
+  margin: 20px;
+  padding: 20px;
+  border: 0.1px solid var(--black);
+  width: 400px;
+  box-sizing: border-box;
+
+  position: relative;
+  overflow: unset;
+}
+
+.repository::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 40px; 
+  height: 20px;
+
+  border-top: 5px solid var(--black);
+  border-left: 5px solid var(--black);
+
+}
+.repository::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 40px;
+  height: 20px;
+
+  border-bottom: 5px solid var(--black);
+  border-right: 5px solid var(--black);
+}
+
+  
+.repository h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.repository p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--black);
+}
+
+a {
+text-decoration: none;
+color: var(--black);
+}
+
+.repository a:hover {
+  text-decoration:underline;
+}
+
+@media (min-width: 476px) {
+  .repository:hover {
+    border: 0.5px solid var(--black);
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    background-color: var(--white);
+  }
+}
+
+  
+@media (max-width: 475px) {
+  .repository {
+    width: 100%;
+    margin: 0;
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-bottom: 17px;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 1.5px solid var(--black);
+  }
+
+  .repository {
+
+  }
+  
+  .list-res {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+  
+  #repositories {
+      margin: 0;
+      padding: 0;
+  }
+
+  .repository::before, .repository::after {
+    display: none;
+  }
+}
+
+/*________________________________________________________________________________ [ Dark-mode ] ____________________*/
+.dark-mode .repository {
+  background-color: var(--black);
+}
+
+.dark-mode .year-timeline,
+.dark-mode .actions-date,
+.dark-mode .repository p {
+  color: var(--white)
+}
+.dark-mode a {
+  color: var(--blue)
+}
+
+@media (min-width: 476px) {
+  .dark-mode .repository {
+    border-left: 1px solid var(--white);
+  }
+  
+  .dark-mode  .repository::after {
+    display: none
+  }
+
+  .dark-mode  .repository::before {
+    display: none
+  }
+}
+
+@media (max-width: 475px) {
+  .dark-mode .repository {
+    border: 1px solid var(--white);
+  }
+}

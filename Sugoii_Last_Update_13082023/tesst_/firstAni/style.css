@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+  }
+  
+  .opening-effect {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff; /* Đổi màu nền tùy ý */
+	animation: openingAnimation 3s ease-in-out;
+	opacity: 0;
+  }
+  
+  .blinds-container {
+	display: flex;
+	height: 100%;
+  }
+  
+  .blinds {
+	flex: 1;
+	height: 100%;
+	background-color: #fff; /* Đổi màu nền tùy ý */
+	animation: blindsAnimation 3s ease-in-out;
+  }
+  
+  @keyframes openingAnimation {
+	0% {
+	  transform: scaleX(0);
+	  opacity: 0;
+	}
+	100% {
+	  transform: scaleX(1);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes blindsAnimation {
+	0% {
+	  transform: scaleY(0);
+	}
+	100% {
+	  transform: scaleY(1);
+	}
+  }
+  

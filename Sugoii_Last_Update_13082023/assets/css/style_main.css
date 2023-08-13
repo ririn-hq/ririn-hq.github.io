@@ -1,0 +1,311 @@
+/* Color */
+:root {
+    --blue:  rgb(0, 242, 255);
+    --black: rgb(0,0,0);
+    --white: rgb(242, 242, 242);
+    --red: rgb(255, 0, 0);
+}
+
+/*_______________________________________________________________ [ Main ] ____________________*/
+
+.list li:nth-child(1) {
+  display: none;
+}
+.main{
+  width: 100vw;
+  height: 74vh;
+
+  color: var(--black);
+  display: flex;
+  flex-basis: 0%;
+  flex-direction:column;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+}
+
+
+.dark-mode .main {
+    /* z-index: 90 !important; */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 2rem;
+    width: 76%;
+
+    z-index: 2;
+
+}
+.avt {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+    height: 168px;
+    width: 100%;
+}
+.myavt {
+    display: block;
+    border: 7px double var(--blue);
+    border-radius: 50%;
+    height: 168px;
+    width: 168px;
+    box-shadow: 0 9px 9px rgba(180, 35, 129, 0.4);
+    cursor:not-allowed ;
+}
+
+.myavt:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+.description {
+    display: flex;
+    text-align: center;
+    color:var(--black);
+}
+/*_______________________________________________________________ [ Stars ] ____________________*/
+
+
+/*_______________________________________________________________ [ Waves ] ____________________*/
+.div-wave {
+  position: fixed;
+  bottom: 0;
+  height: 121px;
+  width: 200vh;
+
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+}
+
+.waves {
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+  z-index: 19;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+
+    z-index: 18;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/*_______________________________________________________________ [ Bubble ] ____________________*/
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #a8c0ff;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+  }
+  
+  .circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+  
+  .circles li:nth-child(2) {
+    left: 10%;
+    width: 45px;
+    height: 45px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+  
+  .circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+  
+  .circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+  
+  .circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+  
+  .circles li:nth-child(7) {
+    left: 35%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 7s;
+  }
+  
+  .circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+  
+  .circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+  
+  .circles li:nth-child(10) {
+    left: 85%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+  
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+  
+.dark-mode .circles {
+    display: none;
+}
+
+@media (max-width: 475px) {
+  .myavt {
+    height: 150px;
+    width: 150px;
+}
+
+.myavt:hover {
+    transform: unset;
+}
+
+
+
+    .circles li:nth-child(6),
+    .circles li:nth-child(10) {
+        display: none;
+      }
+      .circles {
+        padding-left:0;
+      }
+
+  }
+
+

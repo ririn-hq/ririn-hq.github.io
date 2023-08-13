@@ -1,0 +1,206 @@
+/* Color */
+:root {
+    --blue:  rgb(0, 242, 255);
+    --trueBlack: rgb(0, 0, 0);
+    --trueWhite: rgb(255, 255, 255);
+    --red: rgb(186, 42, 42);
+    --black: rgb(0,0,0);
+    --white: rgb(255, 255, 255);
+}
+
+body {
+  overflow: auto !important;
+}
+
+.container {
+  position: fixed !important;
+  top: 0;
+  background-color:var(--trueWhite);
+  transition: background-color 1.3s ease-out;
+
+}
+
+.navbar {
+  z-index: 100;
+}
+
+/*_________________________________________________ [ Style ] ____________________*/
+
+/*  */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+h4, p {
+    text-align: center;
+}
+
+.text-hello {
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+a { 
+  text-decoration: none;
+  position: relative;
+  overflow: visible;
+}
+
+a.waifu::after {
+  content: "";
+  display: none;
+
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+a.waifu:hover::after {
+  display: inline-block; 
+}
+
+a.kurumi::after {
+  content: "";
+  background-image: url("./image/kurumi_icon2.jpg");
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 4px double rgb(255, 0, 0);
+
+  left: -210px;
+  bottom: -100px;
+
+}
+
+a.elysia::after {
+  content: "";
+  background-image: url("./image/elysia_icon2.jpg");
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 3px solid rgb(255, 0, 238);
+
+  left: -70px;
+  bottom: 80px;
+}
+a.hoshinoAi::after {
+  content: "";
+  background-image: url("./image/hoshinoAi-icon.jpg");
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 3px solid rgb(255, 0, 238);
+
+  right: -210px;
+  bottom: -100px;
+}
+
+
+a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.dark-mode a:hover {
+  color:var(--red); /* Khách */
+  font-weight: bold;
+}
+
+.more-infomations {
+  display: block;
+  width: 70vw;
+
+  z-index: 10;
+}
+  
+.hello,
+.name-more,
+.gamelist,
+.anime,
+.fact-content,
+.like-sendu, span {
+  width: 100%;
+}
+
+.id-game, .id-name {
+  padding-left: 38%;
+}
+
+/*_________________________________________________ [ Responsive ] ____________________*/
+@media (min-width: 1023px) {
+  a.waifu::after {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .id-game, .id-name {
+    padding-left: 30%;
+  }
+}
+
+@media (max-width: 730px) {
+  .id-game, .id-name {
+    padding-left: 25%;
+  }
+}
+
+@media (max-width: 475px) {
+  .more-infomations {
+    width: 90vw;
+  }
+
+  .id-game, .id-name {
+    padding-left: 15%;
+  }
+
+  .text-hello {
+    font-size: 25px;
+  }
+
+  a.waifu:hover::after {
+    display: none; 
+  }
+}
+
+@media (max-width: 321px) {
+  html {
+    font-size: 12px;
+  }
+  .text-hello {
+    font-size: 15px;
+  }
+  .more-infomations {
+    width: 95vw;
+  }
+}
+
+/*________________________________________________________________________________ [ Dark-mode ] ____________________*/
+.dark-mode a {
+  text-decoration: underline;
+}
+.dark-mode .hello,
+.dark-mode .name-more,
+.dark-mode .gamelist,
+.dark-mode .anime,
+.dark-mode .fact-content,
+.dark-mode .like-sendu,
+.dark-mode span,
+.dark-mode h4 {
+  color: var(--white);
+} 
+
+.dark-mode .container {
+  background-color: var(--black);
+}

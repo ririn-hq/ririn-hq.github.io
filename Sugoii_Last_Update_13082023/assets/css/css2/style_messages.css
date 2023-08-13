@@ -1,0 +1,303 @@
+
+:root {
+    --blue:  rgb(0, 242, 255);
+    --black: rgb(27, 30, 33);
+    --trueBlack: rgb(0, 0, 0);
+    --white: rgb(218, 213, 213);
+    --red: rgb(186, 42, 42);
+}
+
+.list li:nth-child(6) {
+    display: none;
+}
+
+.list li {
+    margin: 7px;
+}
+
+/* .list li:nth-child(1):hover::before, */
+.list li:nth-child(2):hover::before,
+.list li:nth-child(3):hover::before,
+.list li:nth-child(4):hover::before,
+.list li:nth-child(5):hover::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: -7px;
+  width: 7px;
+  height: 7px;
+
+  border-bottom: 3px  solid var(--green);
+  border-right: 3px  solid var(--green);
+}
+
+  
+.box1st {
+    width: 50vw;
+    height: 70vh;
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #000000;
+
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(219, 95, 211, 0.29);
+}
+  
+.messenge-board {
+    border-bottom: 2px solid var(--black);
+    font-size: 30px;
+    font-weight: bold;
+    height: 68px;
+    width: 80%;
+    font-style: italic;
+    z-index: 100;
+    
+    position: absolute;
+    top: 0px;
+}
+  
+.messenge-board::after {
+    content: "Message Board";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+  
+.box2nd {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 68px;
+    overflow: auto;
+}
+  /* Ẩn thanh cuộn dọc */
+  .box2nd::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+/* ____________________________________Messenger icon__________ */
+.divMess {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+  
+.message-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+}
+.message-icon:hover {
+    transition: transform 0.8s ease;
+    transform: scale(1.1);
+}
+
+.iconPicture {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+
+    border: 1px double black;
+}
+/* ____________________________________Expanded__________ */
+.hidden {
+    display: none;
+}
+  
+.expanded {
+    background-color: var(--white);
+    width: 500px;
+    height: 220px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.divMess.expanded .form-visible {
+    display: block;
+}
+  
+/* ____________________________________Messenger list__________ */
+.message {
+    border-bottom: 2px solid var(--black);
+    margin-top: 7px;
+    position: relative;
+}
+  
+.message p {
+    font-size: 16px;
+    margin: 0;
+}
+.message p a {
+    text-decoration: none;
+}
+  
+.message small {
+    font-size: 13px;
+    color: #000000;
+    margin-bottom: 10px;
+}  
+.message p small {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}  
+/* ____________________________________Messenger Input__________ */
+  
+#messageForm {
+    z-index: 10;
+}
+  
+input {
+    width: 400px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    padding-left: 8px;
+
+    font-family: 'Microsoft Jhenghei', 'lanting', Arial;;
+}
+  
+form {
+    display: flex;
+    align-items: center;
+    border: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+  
+  
+  
+/* ____________________________________Button__________ */
+button {
+    background-color: #fbff01;
+    font-weight: bold;
+    color: var(--black);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 7px;
+
+    position: absolute;
+    right: 7px;
+    bottom: 4px;
+
+}
+
+button:hover {
+    background-color: #d3aa2e;
+}
+
+/* ____________________________________[Responsive]__________ */
+
+@media (max-width: 1026px) {
+    .box1st {
+        width: 60vw;
+    }
+}
+@media (max-width: 769px) {
+    .box1st {
+        width: 80vw;
+        height: 70vh;
+    }
+}
+
+@media (max-width: 426px) {
+    .main {
+        height: 100vh;
+    }
+
+    .box1st {
+        width: 100vw;
+        height: 100vh;
+
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid var(--black);
+    }
+
+    .messenge-board::after {
+        width: 100vw;
+        text-align: center;
+
+        bottom: 18px;
+ 
+    }
+
+    .divMess {
+        position: absolute;
+        bottom: 100px;
+        right: 0px;
+        width: 98vw;
+    }
+
+    .messenge-board, .box2nd {
+        width: 95vw;
+    }
+    .box2nd {
+        height: 73%;
+        border-bottom: 1px solid #000000;
+    }
+
+
+    .messenge-board::after {
+        font-size: 28px;
+    }
+
+    input {
+        width: 90vw;
+        height: 30px;
+    }
+      
+    .message-icon {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    .expanded {
+        background-color: var(--white);
+    }
+      
+}
+
+/* ____________________________________[Dark-mode]__________ */
+.dark-mode  .expanded {
+    background-image: linear-gradient(170deg, #ff1313 0%, #00ecfd 52%, #c22dc9 100%);
+
+}
+
+.dark-mode .box1st {
+    border: 1px solid var(--white);
+}
+
+.dark-mode .messenge-board,
+.dark-mode .message {
+    border-bottom: 1px solid var(--white);
+}
+
+.dark-mode .messenge-board::after,
+.dark-mode .message,
+.dark-mode .message small {
+    color:  var(--white);
+}

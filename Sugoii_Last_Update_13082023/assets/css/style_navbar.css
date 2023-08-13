@@ -1,0 +1,333 @@
+/* Color */
+:root {
+  --blue:  rgb(0, 242, 255);
+  --black: rgb(0,0,0);
+  --trueWhite: rgb(255, 255, 255);
+  --red: rgb(255, 0, 0);
+  --green: rgb(4, 255, 0);
+}
+
+
+/*_______________________________________________________________ [ navbar ] ____________________*/
+.container {
+  height: 64px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed !important;
+  top: 0;
+
+  z-index: 99;
+}
+
+.navbar {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1229px;
+  width: 170vh;
+
+  z-index:99;
+}
+
+.navbar-header-logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--black);
+  margin-left: 14px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-navbar-right {
+  display: flex;
+  align-items: center;
+
+  width: 400px;
+  z-index: 100;
+}
+
+.list {
+  list-style: none;
+  margin-right: 20px;
+  display: flex;
+  padding: 0px;
+}
+
+.list li {
+  margin-left: 14px;
+  margin-right: 4px;
+
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.list li:nth-child(1) {
+  display: none;
+}
+
+.list li:nth-child(2),
+.list li:nth-child(3),
+.list li:nth-child(4),
+.list li:nth-child(5) {
+  margin-top: 7px;
+  position: relative;
+}
+
+.list li a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.list li a:hover, .navbar-header-logo a:hover {
+  font-weight: bold;
+}
+
+.list li:nth-child(1):hover::after,
+.list li:nth-child(2):hover::after,
+.list li:nth-child(3):hover::after,
+.list li:nth-child(4):hover::after,
+.list li:nth-child(5):hover::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -7px;
+  width: 7px;
+  height: 7px;
+  border-top: 3px solid var(--green);
+  border-left: 3px solid var(--green);
+}
+
+.list li:nth-child(1):hover::before,
+.list li:nth-child(2):hover::before,
+.list li:nth-child(3):hover::before,
+.list li:nth-child(4):hover::before,
+.list li:nth-child(5):hover::before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  right: -7px;
+  width: 7px;
+  height: 7px;
+
+  border-bottom: 3px  solid var(--green);
+  border-right: 3px  solid var(--green);
+}
+
+.list li:nth-child(6) {
+  margin: 0;
+}
+
+
+/*____________________________________________ [ Responsive styles ] ____________________*/
+@media (max-width: 769px) {
+
+}
+
+
+@media (max-width: 475px) {
+  .menu-toggle {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+    margin-right: 14px;
+  }
+
+  .navbar-header-logo a {
+    font-size: 16px;
+  }
+
+  .list {
+    display: block;
+    margin: 0;
+    padding-bottom: 64px;
+
+  }
+  .menu-navbar-right {
+    display: none;
+  }
+
+  .menu-navbar-right.open {
+    width: 100vw;
+    height: 93vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    background-color: rgba(239, 231, 231, 0.963);
+    padding: 0px;
+    z-index: 100;
+    justify-content: center;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list li:nth-child(1) {
+    display: flex;
+  }
+  
+  .list li:nth-child(5){
+    margin: 20px 0 0 0;
+    padding: 0;
+
+  }
+  .list li:nth-child(1),
+  .list li:nth-child(2),
+  .list li:nth-child(3),
+  .list li:nth-child(4),
+  .list li:nth-child(5) {
+    margin: 0;
+    padding: 0;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 1px solid var(--black);
+  }
+  .dark-mode .list li:nth-child(1),
+  .dark-mode .list li:nth-child(2),
+  .dark-mode .list li:nth-child(3),
+  .dark-mode .list li:nth-child(4),
+  .dark-mode .list li:nth-child(5) {
+    border-bottom: 1px solid var(--white);
+  }
+
+
+  .menu-navbar-right.open li {
+    /* margin: 7px; */
+  }
+
+  .menu-navbar-right.open li a {
+    font-size: 16px;
+    color: var(--black);
+    margin: 10px 0 4px 0;
+  }
+  
+  .menu-navbar-right.open li:last-child {
+    margin-bottom: 0;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  /* Dark mode styles for responsive */
+  body.dark-mode .menu-navbar-right.open {
+    background-color: var(--black);
+  }
+
+  body.dark-mode .menu-navbar-right.open li a {
+    color: var(--white);
+  }
+
+  .navbar.dark-mode .menu-toggle,
+  .navbar.dark-mode .menu-navbar-right {
+    color: var(--white);
+  }
+
+  .list li:nth-child(1):hover::after,
+  .list li:nth-child(2):hover::after,
+  .list li:nth-child(3):hover::after,
+  .list li:nth-child(4):hover::after,
+  .list li:nth-child(5):hover::after,
+  .list li:nth-child(1):hover::before,
+  .list li:nth-child(2):hover::before,
+  .list li:nth-child(3):hover::before,
+  .list li:nth-child(4):hover::before,
+  .list li:nth-child(5):hover::before {
+    display: none;
+  }
+}
+
+
+/* _______________________________________________[ Dark/Light Button ]_________________________ */
+.toggle-btn {
+  position: relative;
+  width: 72.5px; 
+  height: 37px; 
+  margin: 0 auto;
+  border-radius: 20px; 
+  transform: scale(0.5); 
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+._1st-toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #000000;
+  box-shadow: 0px 1px 12.5px #02e1ff; 
+  border-radius: 20px; 
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+._1st-toggle-btn span:before,
+._1st-toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 4px; 
+  width: 29px; 
+  height: 29px; 
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+._1st-toggle-btn span:before {
+  background-color: #000000;
+  transform: translate(-29px, 0px); 
+  z-index: 1;
+}
+
+._1st-toggle-btn span:after {
+  background-color: #ffffff;
+  transform: translate(4px, 0px); 
+  z-index: 0;
+}
+
+._1st-toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #ffffff;
+}
+
+._1st-toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+
+._1st-toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: #ffffff;
+  transform: translate(28px, -9.5px); 
+}
+
+._1st-toggle-btn input[type="checkbox"]:checked + span:after {
+
+  background-color: #000000;
+  transform: translate(39.5px, 0px); 
+}
