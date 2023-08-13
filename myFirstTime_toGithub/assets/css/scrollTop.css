@@ -1,0 +1,72 @@
+/*________________________________________________________________________________ [ Back to Top Button ] ____________________*/
+.scrollToTopBtn {
+    border: none;
+    border-radius: 8%;
+    cursor: pointer;
+    font-size: 10px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 110px;
+    right: 23px;
+    z-index: 70;
+
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease
+}
+.scrollToTopBtn:hover {
+    background-color: rgba(137, 131, 131, 0.785);
+}
+/* .scrollToTopBtn::after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 17px solid rgb(0, 0, 0);
+
+    display: block;
+} */
+
+
+   
+.showBtn {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+@media (max-width: 475px) {
+    .scrollToTopBtn {
+        border-radius: 50%;
+        bottom: 100px;
+        right: 17px;
+        width: 40px;
+        height: 40px;
+    }
+}
+/*________________________________________________________________________________ [ Dark-mode ] ____________________*/
+.dark-mode .scrollToTopBtn {
+    background-color: aliceblue;
+}
+.dark-mode .scrollToTopBtn:hover {
+    background-color: rgba(84, 95, 96, 0.573);
+}
+
+.dark-mode .scrollToTopBtn::after {
+    border-bottom: 17px solid rgb(255, 0, 0);
+}
+
+.chevron-up-outline {
+    font-size: 28px;
+    font-weight: bold;
+}
+.light-mode .scrollToTopBtn {
+    background-color: rgb(231, 199, 199);
+}
+.light-mode .scrollToTopBtn:hover {
+    background-color: rgb(228, 135, 135);
+}

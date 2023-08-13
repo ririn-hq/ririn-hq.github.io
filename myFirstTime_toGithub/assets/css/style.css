@@ -1,0 +1,65 @@
+/* Color */
+:root {
+  --style-blue:  rgb(0, 242, 255);
+
+  --style-white: rgb(228, 230, 235);
+  --style-whiteBlack: rgb(156, 158, 163);
+  --style-trueWhite: rgb(255, 255, 255);
+
+  --style-black: rgb(5, 5, 5);
+  --style-blackGithub: rgb(13, 17, 23);
+  --style-black--: rgb(10, 22, 26);
+  --style-trueBlack: rgb(0, 0, 0);
+
+  --style-red: rgb(253, 0, 0);
+  --style-yellow: rgb(253, 169, 0);
+
+
+  --style-fontLightmode: 25px;
+}
+  
+  html {
+    font-family: 'Microsoft Jhenghei', 'lanting', Arial;
+    transition: background-color .7s cubic-bezier(0.5, 0.1, 0.5, 1);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-color: var(--style-blackGithub);
+    
+    position: relative;
+    overflow-x: hidden;
+  }
+
+
+body.light-mode {
+  background-color: var(--style-trueWhite);
+  /* color: var(--white); */
+}
+
+  
+.main{
+  width: 100vw;
+
+  color: var(--style-blackGithub);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 50;
+}
+  
+::selection {
+  background-color: var(--style-trueWhite); /* Màu nền khi bôi đen */
+  color:var(--style-trueBlack); /* Màu chữ khi bôi đen */
+}
+  
+.light-mode ::selection  {
+  background-color: var(--style-trueBlack); /* Màu nền khi bôi đen */
+  color: var(--style-blue); /* Màu chữ khi bôi đen */
+}
