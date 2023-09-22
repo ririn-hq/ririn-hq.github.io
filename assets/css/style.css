@@ -72,8 +72,21 @@ body {
   text-align: center;
 }
 
+.main_left h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(41, 42, 57);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
-
+.descript {
+  margin-top: 20px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(41, 42, 57);
+}
 
 
 
@@ -89,7 +102,7 @@ body {
 .card_information {
   width: 480px;
   height: 350px;
-  background-color: rgb(83, 81, 82);
+  background-color: rgb(41, 42, 57);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -129,15 +142,25 @@ body {
 .card_bottom {
   height: 90%;
   padding: 20px;
+  padding-bottom: 0;
+  padding-top: 30px;
   color: aliceblue;
   font-family: 'Consolas', 'Courier New', monospace;
   font-size: 14px;
+  line-height: 20px;
 }
 .code_key_value {
   padding-left: 20px;
 }
 .code_descript {
   display: flex;
+}
+
+.code_color-pink {
+  color: rgb(235, 16, 209);
+}
+.code_color_yellow {
+  color: rgb(255, 255, 0);
 }
 /* __________________________ Contact ______________ */
 .contacts {
