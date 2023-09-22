@@ -5,6 +5,15 @@
   --white: rgb(242, 242, 242);
   --red: rgb(255, 0, 0);
 }
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url('./Poppins/Poppins-Black.ttf') format('truetype'),
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
 
 html {
   font-family: 'Microsoft Jhenghei', 'lanting', Arial;
@@ -17,6 +26,10 @@ html {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -26,6 +39,10 @@ body {
   background-image: linear-gradient(45deg, #ed6ea0 0%, #32c8ce 51%, #fb00ff 100%);
   overflow: hidden;
   position: relative;
+
+  background-image: url('../image/thumb-1920-700049.jpg');
+  background-size: cover;
+  backdrop-filter: blur(5px);
 }
 
 ::selection {
@@ -41,27 +58,37 @@ body {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
+  background-color: rgb(208, 205, 202);
 }
 
 .main {
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
   border-radius: 10px;
   display: flex;
+  overflow: hidden;
 }
 
 
 /* __________________________ Left ______________ */
 .main_left {
-  border-right: 1px solid black;
+  border-right: 10px solid rgb(208, 205, 202);
   width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
 }
 
+.circle {
+  background-image: linear-gradient(45deg, #ff00fb 0%, #32c8ce 51%, #ed6ea0 100%);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(224, 6, 236, 0.35) 0px 5px 15px;
+}
 .circle img {
   width: 157px;
   border-radius: 50%;
@@ -74,16 +101,17 @@ body {
 
 .main_left h1 {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 900;
   color: rgb(41, 42, 57);
   margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .descript {
-  margin-top: 20px;
   font-family: 'Consolas', 'Courier New', monospace;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   color: rgb(41, 42, 57);
 }
@@ -98,6 +126,7 @@ body {
   justify-content: center;
   width: 65%;
   padding: 20px;
+  background-color: whitesmoke;
 }
 .card_information {
   width: 480px;
@@ -111,7 +140,7 @@ body {
 
   align-items: center;
   height: 40px;
-  background-color: rgb(131, 127, 123);
+  background-color: rgb(77, 76, 76);
   height: 10%;
 }
 .card_top ul {
@@ -121,21 +150,21 @@ body {
 }
 
 .card_top ul li {
-  background-color: #32c8ce;
-  --circle: 24px;
+  background-color: rgb(50, 200, 206);
+  --circle: 18px;
   width: var(--circle);
   height: var(--circle);
   border-radius: 50%;
   margin-right: 10px;
 }
 .card_top ul li:nth-child(1) {
-  background-color: #d71b1b;
+  background-color: rgb(234, 67, 55);
 }
 .card_top ul li:nth-child(2) {
-  background-color: #3ad71b;
+  background-color: rgb(233, 214, 12);
 }
 .card_top ul li:nth-child(3) {
-  background-color: #d7c11b;
+  background-color: rgb(27, 215, 27);
 }
 
 
@@ -148,6 +177,8 @@ body {
   font-family: 'Consolas', 'Courier New', monospace;
   font-size: 14px;
   line-height: 20px;
+
+  position: relative;
 }
 .code_key_value {
   padding-left: 20px;
@@ -162,17 +193,78 @@ body {
 .code_color_yellow {
   color: rgb(255, 255, 0);
 }
-/* __________________________ Contact ______________ */
-.contacts {
-  margin-top: 20px;
+
+
+.more_information {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
 }
-.contacts a ion-icon {
-  font-size: 40px;
-  margin-right: 10px;
-  color: black;
+.more_information ion-icon {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   padding: 5px;
   border-radius: 50%;
+  background-color: #ed6ea0;
 }
-.contacts a ion-icon:hover {
-  color: rgb(204, 47, 105);
+.more_information ion-icon:hover {
+  color: rgb(255, 255, 255);
+  background-color: #da6eed;
 }
+
+.more_information span {
+  position: absolute;
+  top: -24px;
+  right: 0;
+
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: max-content;
+  height: max-content;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.more_information:hover .child_infor {
+  display: block;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+/* __________________________ Contact ______________ */
+.contacts {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.contacts svg {
+  font-size: 35px;
+  margin-right: 20px;
+}
+.contacts a svg:nth-child(3) {
+  font-size: 33px;
+}
+
+.contacts svg:hover {
+  transform: scale(1.2) translateY(-5px);
+  transition: all 0.3s ease-in-out;
+
+}
+.contacts a:nth-child(1) svg:hover {
+  fill: rgb(0, 87, 250);
+}
+.contacts a:nth-child(2) svg:hover {
+  fill: rgb(250, 37, 0);
+}
+.contacts a:nth-child(3) svg:hover {
+  fill: rgb(0, 67, 250);
+}
+.contacts a:nth-child(4) svg:hover {
+  fill: rgb(0, 29, 250);
+}
+
+
+
