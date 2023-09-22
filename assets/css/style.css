@@ -10,22 +10,22 @@ html {
   font-family: 'Microsoft Jhenghei', 'lanting', Arial;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
-  display: block;
-  max-height: 100vh;
-  max-width: 100wh;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: linear-gradient(45deg, #ed6ea0 0%, #32c8ce 51%, #fb00ff 100%);
   overflow: hidden;
+  position: relative;
 }
 
 ::selection {
-  background-color: var(--black); /* Màu nền khi bôi đen */
-  color:var(--blue); /* Màu chữ khi bôi đen */
+  background-color: var(--black);
+  color:var(--blue);
 }
-  
-.dark-mode ::selection  {
-  background-color: var(--white); /* Màu nền khi bôi đen */
-  color: var(--red); /* Màu chữ khi bôi đen */
-}
-
