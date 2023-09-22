@@ -8,6 +8,7 @@
 
 html {
   font-family: 'Microsoft Jhenghei', 'lanting', Arial;
+  list-style: none;
 }
 
 * {
@@ -19,6 +20,8 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
 
   background-image: linear-gradient(45deg, #ed6ea0 0%, #32c8ce 51%, #fb00ff 100%);
   overflow: hidden;
@@ -29,3 +32,49 @@ body {
   background-color: var(--black);
   color:var(--blue);
 }
+
+
+.container {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+}
+
+
+/* __________________________ Left ______________ */
+.main_left {
+  border-right: 1px solid black;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  width: 157px;
+  border-radius: 50%;
+}
+
+.main_left .descript {
+  width: 220px;
+  text-align: center;
+}
+
+
+
+
+
+
+/* __________________________ right ______________ */
