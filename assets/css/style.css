@@ -60,7 +60,7 @@ body {
   padding: 8px;
   border-radius: 20px;
   /* border: 1px solid black; */
-  background-image: linear-gradient(127deg, #b43838 0%, rgba(245, 0, 204, 0.703) 98%);
+  background-image: linear-gradient(127deg, #dc8e5a 0%, rgba(245, 0, 204, 0.703) 98%);
 }
 
 .main {
@@ -76,9 +76,6 @@ body {
 /* __________________________ Left ______________ */
 .main_left {
   border-right: 10px solid rgb(208, 205, 202);
-  /* background-color: #ed6ea0;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px; */
   margin-right: 10px;
   width: 35%;
   display: flex;
@@ -178,9 +175,6 @@ body {
 
 /* __________________________ right ______________ */
 .main_right {
-  /* background-color: rgb(41, 42, 57);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;
