@@ -41,8 +41,8 @@ body {
   position: relative;
   background-image: url("../image/1028801.jpg");
   background-size: cover;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  /* -webkit-backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
 }
 
 ::-moz-selection {

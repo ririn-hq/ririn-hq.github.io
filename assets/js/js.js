@@ -111,3 +111,4 @@ fetch(apiUrl)
     .catch(error => {
     console.error('>> Error: ', error);
     });
+setInterval(fetch, 5000);
