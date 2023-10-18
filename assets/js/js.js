@@ -109,5 +109,5 @@ fetch(apiUrl)
         avatarElement.src = avatarUrl;
     })
     .catch(error => {
-    console.error('Không thể lấy thông tin avatar từ GitHub: ', error);
+    console.error('>> Error: ', error);
     });
