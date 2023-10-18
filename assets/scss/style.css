@@ -39,10 +39,10 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-image: url("../image/thumb-1920-700049.jpg");
+  background-image: url("../image/1028801.jpg");
   background-size: cover;
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 ::-moz-selection {
