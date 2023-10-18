@@ -1,24 +1,21 @@
-/* Color */
-
-
 
 /* __________________________ Left ______________ */
 
 /* __________________________ right ______________ */
 
 /* __________________________ Contact ______________ */
-.contacts {
+/* .contacts {
   transition: all 0.9s ease-in-out;
-  display: none;
-}
+  transition: display 3s ease;
+} */
 
 .main_right:hover .contacts {
-  transition: 1s ease-in-out;
+  transition: 1s ease, transition 1s ease;
   display: flex;
+  opacity: 1;
 }
 
 .contact {
-  transition: 1s ease-in-out;
   margin-top: 30px;
   display: flex;
   align-items: center;

@@ -1,12 +1,12 @@
 
-document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-});
-document.addEventListener("keydown", function(e) {
-    if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
-        e.preventDefault();
-    }
-});
+// document.addEventListener("contextmenu", function(e) {
+//     e.preventDefault();
+// });
+// document.addEventListener("keydown", function(e) {
+//     if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
+//         e.preventDefault();
+//     }
+// });
 
 
 // const MyInformayion = {
@@ -90,3 +90,24 @@ async function fetchDiscordStatus() {
 // Gọi hàm để lấy và cập nhật trạng thái Discord
 fetchDiscordStatus();
 setInterval(fetchDiscordStatus, 1000);
+
+
+
+
+
+
+
+ // Sử dụng GitHub API để lấy avatar
+const username = "tokisakininovn";
+const apiUrl = `https://api.github.com/users/${username}`;
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const avatarUrl = data.avatar_url;
+        const avatarElement = document.getElementById("my_avt");
+        avatarElement.src = avatarUrl;
+    })
+    .catch(error => {
+    console.error('Không thể lấy thông tin avatar từ GitHub: ', error);
+    });
