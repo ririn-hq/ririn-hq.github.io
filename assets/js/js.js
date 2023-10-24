@@ -71,7 +71,8 @@ async function fetchDiscordStatus() {
                 break;
             case "offline":
                 statusText.textContent = "Offline";
-                backgroundColor = "#474646";
+                // backgroundColor = "#474646";
+                backgroundColor = "rgb(255, 0, 242);";
                 filter = "saturate(30%)";
                 avatarDiv.style.filter = filter;
                 break;
