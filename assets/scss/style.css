@@ -43,6 +43,8 @@ body {
   background-image: url("../image/1028801.jpg");
   background-image: url("../image/Elysia.jpg");
   background-size: cover;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 ::-moz-selection {
