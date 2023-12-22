@@ -40,17 +40,12 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-image: url("../image/1028801.jpg");
-  background-image: url("../image/Elysia.jpg");
+  background-image: url("./assets/image/Elysia.full.3784764.jpg");
   background-size: cover;
-}
-
-::-moz-selection {
-  background-color: var(--black);
-  color: var(--blue);
+  backdrop-filter: blur(5px);
 }
 
 ::selection {
   background-color: var(--black);
   color: var(--blue);
-}/*# sourceMappingURL=style.css.map */
+}

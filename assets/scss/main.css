@@ -5,6 +5,9 @@
   --red: rgb(255, 0, 0);
 }
 
+body {
+  /* __________________________ Reponsive ______________ */
+}
 body .container {
   width: 900px;
   height: 550px;
@@ -97,6 +100,13 @@ body .container .main .main_left .descript {
   font-size: 18px;
   line-height: 20px;
   color: rgb(41, 42, 57);
+}
+@media (max-width: 1023px) {
+  body .container .main .main_left {
+    margin-right: unset;
+    border-right: unset !important;
+    height: 550px;
+  }
 }
 body .container .main div.main_right {
   display: flex;
@@ -239,19 +249,12 @@ body .container .main div.main_right .contact li:nth-child(3) svg:hover {
 body .container .main div.main_right .contact li:nth-child(4) svg:hover {
   fill: rgb(0, 92, 250);
 }
-
-/* __________________________ Reponsive ______________ */
 @media (max-width: 1023px) {
-  .main {
+  body .container .main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: scroll !important;
-  }
-  .main_left {
-    margin-right: unset;
-    border-right: unset;
-    height: 550px;
+    overflow: scroll;
   }
 }/*# sourceMappingURL=main.css.map */
