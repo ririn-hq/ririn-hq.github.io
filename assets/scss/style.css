@@ -46,8 +46,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
-  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
 }
 
 ::-moz-selection {

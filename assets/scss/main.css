@@ -125,6 +125,17 @@ body .container .main div.main_right .card_information {
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+@media (max-width: 600px) {
+  body .container .main div.main_right .card_information {
+    width: 150%;
+    height: 380px;
+  }
+}
+@media (max-width: 425px) {
+  body .container .main div.main_right .card_information {
+    width: 170%;
+  }
+}
 body .container .main div.main_right .card_top {
   display: flex;
   align-items: center;
@@ -213,6 +224,17 @@ body .container .main div.main_right .card_bottom .more_information:hover .child
   display: block;
   transition: all 0.9s ease-in-out;
 }
+@media (max-width: 425px) {
+  body .container .main div.main_right .card_bottom {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 375px) {
+  body .container .main div.main_right .card_bottom {
+    font-size: 13px;
+  }
+}
 body .container .main div.main_right .contact {
   margin-top: 30px;
   display: flex;
@@ -225,6 +247,11 @@ body .container .main div.main_right .contact svg {
 body .container .main div.main_right .contact svg:hover {
   transform: scale(1.2) translateY(-3px);
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 425px) {
+  body .container .main div.main_right .contact svg {
+    font-size: 30px;
+  }
 }
 body .container .main div.main_right .contact li {
   padding: 5px 7px;
@@ -250,6 +277,12 @@ body .container .main div.main_right .contact li:nth-child(3) svg:hover {
 }
 body .container .main div.main_right .contact li:nth-child(4) svg:hover {
   fill: rgb(0, 92, 250);
+}
+@media (max-width: 425px) {
+  body .container .main div.main_right .contact li {
+    padding: 3px;
+    height: 30px;
+  }
 }
 @media (max-width: 1023px) {
   body .container .main {
