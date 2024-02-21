@@ -48,9 +48,13 @@ body {
   background-image: url('../image/1028801.jpg');
   background-image: url('../image/Elysia.jpg');
   background-size: cover;
-  // backdrop-filter: blur(5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  // -webkit-backdrop-filter: blur(1px);
   // -webkit-backdrop-filter: blur(5px);
-  filter: blur(.1px);
 }
 
 ::selection {
