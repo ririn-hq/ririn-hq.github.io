@@ -235,6 +235,11 @@ body .container .main div.main_right .card_bottom .more_information:hover .child
     font-size: 13px;
   }
 }
+@media (max-width: 350px) {
+  body .container .main div.main_right .card_bottom {
+    font-size: 10px;
+  }
+}
 body .container .main div.main_right .contact {
   margin-top: 30px;
   display: flex;
