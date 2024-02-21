@@ -123,6 +123,7 @@ body .container .main div.main_right .card_information {
   background-color: rgb(41, 42, 57);
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 body .container .main div.main_right .card_top {
   display: flex;
@@ -254,8 +255,20 @@ body .container .main div.main_right .contact li:nth-child(4) svg:hover {
   body .container .main {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     overflow: scroll;
+  }
+}
+@media (max-width: 700px) {
+  body .container {
+    border-right: unset !important;
+    height: 550px;
+    width: 90vw;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */
