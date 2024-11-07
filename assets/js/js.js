@@ -10,8 +10,8 @@ document.addEventListener("keydown", function(e) {
 
 
 // const MyInformayion = {
-//     name: 'Tokisaki Nino',
-//     age: 'N/a',
+//     name: 'Ririn HQ',
+//     age: '22',
 //     gender: 'N/a',
 //     skill: ['Js', 'Python', 'C#', 'Java'],
 //     game: ['Genshin Impact', 'Honkai Impact 3rd'],
@@ -99,7 +99,7 @@ document.addEventListener("keydown", function(e) {
 
 
  // Sử dụng GitHub API để lấy avatar
-const username = "tokisakininovn";
+const username = "ririnvieux";
 const apiUrl = `https://api.github.com/users/${username}`;
 
 fetch(apiUrl)
