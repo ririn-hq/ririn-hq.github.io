@@ -40,7 +40,7 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-image: url("./assets/image/Elysia.full.3784764.jpg");
+  background-image: url("./assets/image/Elysia.jpg");
   background-size: cover;
   backdrop-filter: blur(5px);
 }
